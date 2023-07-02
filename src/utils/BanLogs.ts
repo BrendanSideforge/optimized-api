@@ -4,7 +4,7 @@ import { getAuthorizedUser } from "./AuthorizedUsers";
 
 export function getBanLogLink(server: string): string {
 
-    return `https://${server}.sploop.io/ws/banLog_UIW0NDKALZ79`;
+    return `https://${server}.sploop.io`;
 
 }
 
@@ -58,7 +58,7 @@ export async function getPlayersFromEveryServer() {
     for (let i: number = 0; i < config.Moderation.servers.length; i++) {
 
         const server: object | any = config.Moderation.servers[i];
-        const player_logs: any = `https://${server.value}.sploop.io/ws/playerList_BUG7NFGNA1UY`
+        const player_logs: any = `https://${server.value}.sploop.io`
 
         if (!players.players[server.value]) players.players[server.value] = [];
 
